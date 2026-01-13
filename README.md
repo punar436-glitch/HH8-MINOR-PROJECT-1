@@ -74,6 +74,6 @@ incident-reporting-system/
 
 
 ## Important Note
-This project is developed strictly for educational and internship purposes. No real systems or sensitive data were harmed or tested
+This project is developed strictly for educational and internship purposes. No real systems or sensitive data were harmed or teste
 
 

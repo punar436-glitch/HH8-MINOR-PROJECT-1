@@ -1,13 +1,22 @@
-{
-    "incident_details": {
-        "incident_type": "Enter Incident Type: Phishing Attack",
-        "impact": "Describe the Impact: User credentials compromised",
-        "evidence": "Enter Evidence Details: Email headers and logs collected",
-        "resolution": "Resolution Taken: Passwords reset and accounts secured"
+[
+    {
+        "incident_id": " INC002",
+        "date": "01-02-2026",
+        "impact": "unautherised acess",
+        "evidence": "severe logs",
+        "resolution": "password rest",
+        "investigator": "admine",
+        "status": "Open",
+        "timestamp": "2026-01-13 12:17:56"
     },
-    "signature": {
-        "investigator": "Enter Investigator Name: Prithvi",
-        "timestamp": "2026-01-10 16:57:31.381480",
-        "digital_signature": "750aa3d048b714f539cf261375173754764f4b30cb72c4aedd71e1d0af41103f"
+    {
+        "incident_id": "inc001",
+        "date": "01-02-2026",
+        "impact": "accident",
+        "evidence": "sport verification",
+        "resolution": "fir",
+        "investigator": "admin",
+        "status": "Open",
+        "timestamp": "2026-01-13 12:19:50"
     }
-}
+]

@@ -1,13 +1,33 @@
 from incident_form import collect_incident
-from signature import generate_signature
-from storage import save_incident
+from storage import save_incident, view_incidents, search_incident, send_to_server
 
-def main():
-    incident = collect_incident()
-    investigator = input("Enter Investigator Name: ")
+def menu():
+    print("\n--- Incident Reporting System ---")
+    print("1. Report New Incident")
+    print("2. View All Incidents")
+    print("3. Search Incident by ID")
+    print("4. Exit")
 
-    signature = generate_signature(investigator)
-    save_incident(incident, signature)
+while True:
+    menu()
+    choice = input("Enter choice: ")
 
-if __name__ == "__main__":
-    main()
+    if choice == "1":
+        incident = collect_incident()
+        save_incident(incident)
+        send_to_server(incident)
+        print("Incident recorded successfully!")
+
+    elif choice == "2":
+        view_incidents()
+
+    elif choice == "3":
+        iid = input("Enter Incident ID: ")
+        search_incident(iid)
+
+    elif choice == "4":
+        print("Exiting system...")
+        break
+
+    else:
+        print("Invalid choice!")

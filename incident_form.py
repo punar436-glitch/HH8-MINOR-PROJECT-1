@@ -1,16 +1,30 @@
+from datetime import datetime
+from signature import generate_signature
+
 def collect_incident():
-    print("===== Incident Reporting Form =====")
+    print("\nEnter Incident Details")
 
-    incident_type = input("Enter Incident Type: ")
-    impact = input("Describe the Impact: ")
-    evidence = input("Enter Evidence Details: ")
-    resolution = input("Resolution Taken: ")
+    incident_id = input("Incident ID: ")
+    date = input("Date (DD-MM-YYYY): ")
+    impact = input("Impact: ")
+    evidence = input("Evidence: ")
+    resolution = input("Resolution: ")
+    investigator = input("Investigator Name: ")
 
-    incident = {
-        "incident_type": incident_type,
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    status = "Open"
+
+    signature = generate_signature(incident_id, investigator, timestamp)
+
+    return {
+        "incident_id": incident_id,
+        "date": date,
         "impact": impact,
         "evidence": evidence,
-        "resolution": resolution
+        "resolution": resolution,
+        "investigator": investigator,
+        "status": status,
+        "timestamp": timestamp,
+        
     }
 
-    return incident
